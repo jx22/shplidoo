@@ -4,31 +4,60 @@
 
 <link href="https://fonts.googleapis.com/css?family=Contrail+One|PT+Sans+Narrow" rel="stylesheet">
 
+
 <title>Shplidoo</title>
+   
 <style>
 
-body {background-color: #373738;}
+    body {background-color: #373738;}
 
-h1 {
-    font-family: 'Contrail One', cursive;
-    font-size: 36px;
-    color: whitesmoke
-    }
+    h1 {
+        font-family: 'Contrail One', cursive;
+        font-size: 36px;
+        color: whitesmoke
+        }
 
-h2 {
-    font-family: 'PT Sans Narrow', sans-serif;
-        font-size: 20px;
-    color: #d8d8d8;
-    }
+    h2 {
+        font-family: 'PT Sans Narrow', sans-serif;
+            font-size: 20px;
+        color: #d8d8d8;
+        }
 
-p    {color: #d8d8d8;}
+    p    {color: #d8d8d8;}
 
-</style>
+    </style>
 </head>
 <body>
 
 <h1>Shplidoo!</h1>
-<h2><p>This is a paragraph.</p></h2>
+<h2><p>It's where to share.</p></h2>
+
+<div class="mainDiv">
+    <textarea id="mainText" rows="100" cols="50" placeholder="Type in me." autofocus></textarea>
+    <input id="submitBtn" onclick="submitClick()" type="submit" value="Shplidoo!">
+</div>
+
+<p></p>
+<p></p>
+<p></p>
+
+<center><h2>THE FRONT PAGE OF THE INTERNET, SINCE 2017</h1></center>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBKwQ-4c3BeixpEAhVPaDNRodyVsr-otKA",
+    authDomain: "shplidoo.firebaseapp.com",
+    databaseURL: "https://shplidoo.firebaseio.com",
+    projectId: "shplidoo",
+    storageBucket: "shplidoo.appspot.com",
+    messagingSenderId: "1078994663022"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="index.js"></script>
 
 </body>
 </html>
