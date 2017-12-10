@@ -10,7 +10,7 @@
 <title>Shplidoo</title>
    
 <style>
-
+    
     body {background-color: #373738;}
 
     h1 {
@@ -35,9 +35,12 @@
 <h2><p>It's where to share.</p></h2>
 
 <div class="mainDiv">
-    <textarea id="mainText" rows="100" cols="50" placeholder="Type in me." autofocus></textarea>
-    <input id="submitBtn" onclick="submitClick()" type="submit" value="Shplidoo!">
+    <textarea id="mainText" rows="40" cols="50" placeholder="Type in me." autofocus></textarea>
+<p></p>
+    <input id="submitBtn" onclick="submitClick()" type="submit" value="Shplidoo it!">
 </div>
+
+<h2><p id="demo"></p></h2>
 
 <p></p>
 <p></p>
@@ -55,8 +58,20 @@
     projectId: "shplidoo",
     storageBucket: "shplidoo.appspot.com",
     messagingSenderId: "1078994663022"
-  };
-  firebase.initializeApp(config);
+     };
+
+    firebase.initializeApp(config);
+    console.log(firebase);
+
+    var database = firebase.database();
+    var ref = database.ref('posts'); 
+
+    var data = {
+        name: "castlesitter",
+        content: "testtesttesttesttesttestonandonandon"
+    }
+
+    ref.push(data);
 </script>
 
 <script src="index.js"></script>
