@@ -1,5 +1,6 @@
 var mainText = document.getElementById("mainText");
 var submitBtn = document.getElementById("submitBtn");
+var ref = database.ref('latest');
 
 function submitClick() {
 
@@ -11,8 +12,7 @@ function submitClick() {
         alert("You've got to Shplidoo something. Try again!");
         return false;
     } else {
-        confirmation = "Done!";
+        alert("Done!");
     }
-    document.getElementById("demo").innerHTML = confirmation;    
 
 }

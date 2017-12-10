@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <link href="https://fonts.googleapis.com/css?family=Contrail+One|PT+Sans+Narrow" rel="stylesheet">
@@ -27,6 +27,39 @@
 
     p    {color: #d8d8d8;}
 
+    .vl {
+        border-left: 2px solid rgb(114, 114, 114);
+        height: 425px;
+        position: absolute;
+        left: 24%;
+        margin-left: 5px;
+        top: 20px;
+        }
+
+    .button {
+        display: inline-block;
+        background: #d8d8d8;
+        color: black;
+        padding: 18px;
+        font-size: 20px;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-weight: bold;
+        border-radius: 2px;
+        cursor: pointer;
+        border: 2px
+        }
+
+     .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        }
+
     </style>
 </head>
 <body>
@@ -35,12 +68,21 @@
 <h2><p>It's where to share.</p></h2>
 
 <div class="mainDiv">
-    <textarea id="mainText" rows="40" cols="50" placeholder="Type in me." autofocus></textarea>
+    <textarea id="mainText" rows="20" cols="50" placeholder="Type in me." autofocus></textarea>
+    <label class="visuallyhidden" for="mainText">
+        The place to type your text for Shplidoo.
+    </label>
 <p></p>
-    <input id="submitBtn" onclick="submitClick()" type="submit" value="Shplidoo it!">
+    <input id="submitBtn" onclick="submitClick()" type="submit" value="Shplidoo it!" class="button">
 </div>
-
 <h2><p id="demo"></p></h2>
+<h2>Most recent echo:</h2>
+<h2 tabindex="0"><p id="latest"></p></h2>
+<h2></h2>
+
+<!-- TODO: ADD LATEST SHARES HERE -->
+
+<div class="vl"></div>
 
 <p></p>
 <p></p>
